@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+  <modDesc descVersion="38">
+    <author>Slivicon</author>
+    <version>1.0.0.0</version>
+    <title>
+      <de>StartMeUp</de>
+      <en>StartMeUp</en>
+      <fr>StartMeUp</fr>
+    </title>
+    <description>
+      <de><![CDATA[
+
+Dieser Mod bietet Unterstützung für die automatischen Motorstart, wenn die „Seasons“ mod mit.
+
+  Änderungsprotokoll:
+    v1.0.0.0 2017-12-07
+      - Erstveröffentlichung
+
+   ]]></de>
+      <en><![CDATA[
+
+This mod provides support for Automatic Motor Start when using the "Seasons" mod.
+
+Change log:
+  v1.0.0.0 2017-12-07
+    - Initial release
+
+   ]]></en>
+      <fr><![CDATA[
+
+Ce mod fournit un support pour le démarrage automatique du moteur lors de l'utilisation du mod "Seasons".
+
+Journal des modifications:
+  v1.0.0.0 2017-12-07
+    - Version initiale
+
+   ]]></fr>
+    </description>
+    <inputBindings/>
+    <l10n>
+        <text name="smu_breakdown">
+			<de>Motor hat wegen mangelnder Wartung gestoppt.</de>
+			<en>Engine stalled due to lack of maintenance.</en>
+            <fr>Le moteur s'est arrêté en raison d'un manque d'entretien.</fr>
+		</text>
+    </l10n>
+    <multiplayer supported="true"/>
+    <iconFilename>store.dds</iconFilename>
+    <extraSourceFiles>
+      <sourceFile filename="StartMeUp.lua" />
+    </extraSourceFiles>
+  </modDesc>
