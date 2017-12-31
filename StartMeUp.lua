@@ -62,7 +62,17 @@ end;
 function StartMeUp:loadMap(name)
   if g_seasons ~= nil and g_currentMission:getIsServer() then
     --Get the automaticMotorStartEnabled value from the savegame file
-    StartMeUp.savedMotorStartEnabled = getXMLBool(g_currentMission.missionInfo.xmlFile, g_currentMission.missionInfo.xmlKey .. ".settings.automaticMotorStartEnabled");
+    local xml = g_currentMission.missionInfo.xmlFile;
+    if xml ~= nil then
+      local key = Utils.getNoNil(g_currentMission.missionInfo.xmlKey, "") .. ".settings.automaticMotorStartEnabled";
+      if hasXMLProperty(xml, key) then
+        StartMeUp.savedMotorStartEnabled = getXMLBool(xml, key);
+      else
+        StartMeUp.savedMotorStartEnabled = true;
+      end;
+    else
+      StartMeUp.savedMotorStartEnabled = true;
+    end;
   end;
 end;
 

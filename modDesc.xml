@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no" ?>
   <modDesc descVersion="38">
     <author>Slivicon</author>
-    <version>1.0.0.0</version>
+    <version>1.0.0.1</version>
     <title>
       <de>StartMeUp</de>
       <en>StartMeUp</en>
@@ -12,9 +12,12 @@
 
 Dieser Mod bietet Unterstützung für die automatischen Motorstart, wenn die „Seasons“ mod mit.
 
-  Änderungsprotokoll:
-    v1.0.0.0 2017-12-07
-      - Erstveröffentlichung
+Änderungsprotokoll:
+  v1.0.0.1 2017-12-31
+    - Fehler im Protokoll behoben, wenn ein neues Spiel gestartet wird (das noch nicht gespeichert wurde)
+  
+  v1.0.0.0 2017-12-07
+    - Erstveröffentlichung
 
    ]]></de>
       <en><![CDATA[
@@ -22,6 +25,9 @@ Dieser Mod bietet Unterstützung für die automatischen Motorstart, wenn die „
 This mod provides support for Automatic Motor Start when using the "Seasons" mod.
 
 Change log:
+  v1.0.0.1 2017-12-31
+    - Fix error in log when starting a new game (which has not yet been saved)
+    
   v1.0.0.0 2017-12-07
     - Initial release
 
@@ -31,6 +37,9 @@ Change log:
 Ce mod fournit un support pour le démarrage automatique du moteur lors de l'utilisation du mod "Seasons".
 
 Journal des modifications:
+  v1.0.0.1 2017-12-31
+    - Correction d'une erreur dans le journal lors du démarrage d'une nouvelle partie (qui n'a pas encore été enregistrée)
+
   v1.0.0.0 2017-12-07
     - Version initiale
 
