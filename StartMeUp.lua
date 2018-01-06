@@ -52,7 +52,7 @@ end
 function StartMeUp.MotorizedOnEnter(self, isControlling)
   if not g_currentMission.missionInfo.automaticMotorStartEnabled then
     if StartMeUp.isEnabled then
-      self:startMotor(true);
+      self:startMotor();
     end;
   end;
 end
@@ -60,7 +60,7 @@ end
 function StartMeUp.MotorizedOnLeave(self)
   if not g_currentMission.missionInfo.automaticMotorStartEnabled then
     if self.stopMotorOnLeave and StartMeUp.isEnabled then
-      self:stopMotor(true);
+      self:stopMotor();
     end;
   end;
 end
