@@ -11,6 +11,7 @@ local modItem = ModsUtil.findModItemByModName(g_currentModName);
 StartMeUp.version = (modItem and modItem.version) and modItem.version or "?.?.?";
 
 function StartMeUp:deleteMap()
+  StartMeUp:reset();
 end
 
 function StartMeUp:draw()
@@ -20,18 +21,24 @@ function StartMeUp:keyEvent(unicode, sym, modifier, isDown)
 end
 
 function StartMeUp:loadMap(name)
+  StartMeUp:reset();
 end
 
 function StartMeUp:mouseEvent(posX, posY, isDown, isUp, button)
-end;
+end
+
+function StartMeUp:reset()
+  StartMeUp.isEnabled = true;
+  StartMeUp.isInitialized = false;
+end
 
 function StartMeUp:update(dt)
+  if g_dedicatedServerInfo ~= nil or g_currentMission.missionInfo.automaticMotorStartEnabled then
+    return;
+  end;
   if not StartMeUp.isInitialized then
     StartMeUp.isEnabled = g_currentMission.missionInfo.automaticMotorStartEnabled;
     StartMeUp.isInitialized = true;
-  end;
-  if g_dedicatedServerInfo ~= nil or g_currentMission.missionInfo.automaticMotorStartEnabled then
-    return;
   end;
   if InputBinding.hasEvent(InputBinding.TOGGLE_AMS) then
     if StartMeUp.isEnabled then
@@ -51,7 +58,7 @@ end
 
 function StartMeUp.MotorizedOnEnter(self, isControlling)
   if not g_currentMission.missionInfo.automaticMotorStartEnabled then
-    if StartMeUp.isEnabled then
+    if StartMeUp.isEnabled and not self.isMotorStarted and self.controllerName == g_currentMission.missionInfo.playerName then
       self:startMotor();
     end;
   end;
@@ -59,7 +66,7 @@ end
 
 function StartMeUp.MotorizedOnLeave(self)
   if not g_currentMission.missionInfo.automaticMotorStartEnabled then
-    if self.stopMotorOnLeave and StartMeUp.isEnabled then
+    if StartMeUp.isEnabled and self.stopMotorOnLeave and self.isMotorStarted and self.controllerName == g_currentMission.missionInfo.playerName then
       self:stopMotor();
     end;
   end;
