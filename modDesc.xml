@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no" ?>
-  <modDesc descVersion="38">
+  <modDesc descVersion="39">
     <author>Slivicon</author>
-    <version>2.0.0.2</version>
+    <version>2.0.0.3</version>
     <title>
       <de>StartMeUp</de>
       <en>StartMeUp</en>
@@ -12,6 +12,9 @@
 Dieser Mod ermöglicht es Spielern, das automatische Starten und Stoppen von Motoren beim Betreten oder Verlassen von Fahrzeugen als eine Vorliebe für sich selbst zu jeder Zeit während des Spielens ein- oder auszuschalten, wenn die Spieleinstellung für automatischen Motorstart auf "Aus" eingestellt ist.
 
 Änderungsprotokoll:
+  v2.0.0.3 2018-03-09
+    - Ändern Sie die modDesc.xml-Version auf 39, wie von GIANTS gefordert
+
   v2.0.0.2 2018-03-05
      - Behebung eines Multiplayer-Bugs, bei dem die StartMeUp-Einstellung des Players den Motorstart / -stopp für andere Spieler beeinflussen kann
      - Bug behoben, bei dem Motorstart / -stopp unnötigerweise aufgerufen wird
@@ -34,6 +37,9 @@ Dieser Mod ermöglicht es Spielern, das automatische Starten und Stoppen von Mot
 This mod allows players to toggle on or off the automatic starting and stopping of motors upon entering or leaving vehicles as a preference just for themselves, at any time during gameplay, when the game setting for Automatic Motor Start is set to "Off".
 
 Change log:
+  v2.0.0.3 2018-03-09
+    - Change modDesc.xml version to 39, as required by Giants
+
   v2.0.0.2 2018-03-05
     - Fix multiplayer bug where player StartMeUp setting could affect motor start/stop for other players
     - Fix bug where motor start/stop would be called unnecessarily
@@ -56,6 +62,9 @@ Change log:
 Ce mod permet aux joueurs d'activer ou de désactiver le démarrage et l'arrêt automatiques des moteurs à l'entrée ou à la sortie des véhicules en tant que préférence pour eux-mêmes, à tout moment pendant le jeu lorsque le réglage du jeu pour le démarrage automatique est désactivé.
 
 Journal des modifications:
+  v2.0.0.3 2018-03-09
+    - Modifiez la version de modDesc.xml en 39, comme requis par GIANTS
+
   v2.0.0.2 2018-03-05
     - Correction d'un bug multijoueur où le réglage du joueur StartMeUp pouvait affecter le démarrage / l'arrêt du moteur pour les autres joueurs
     - Correction d'un bug où le démarrage / arrêt du moteur serait appelé inutilement
